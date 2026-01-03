@@ -1,0 +1,30 @@
+[project]
+name = "stock_trade_crew"
+version = "0.1.0"
+description = "stock_trade_crew using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "apscheduler>=3.11.2",
+    "crewai[tools]==1.7.2",
+    "email-validator>=2.3.0",
+    "fastapi>=0.128.0",
+    "fastapi-sso>=0.17.0",
+    "litellm>=1.75.3",
+    "yfinance>=1.0",
+]
+
+[project.scripts]
+stock_trade_crew = "stock_trade_crew.main:run"
+run_crew = "stock_trade_crew.main:run"
+train = "stock_trade_crew.main:train"
+replay = "stock_trade_crew.main:replay"
+test = "stock_trade_crew.main:test"
+run_with_trigger = "stock_trade_crew.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

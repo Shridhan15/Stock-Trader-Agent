@@ -1,0 +1,20 @@
+.env
+__pycache__/
+.DS_Store
+.venv
+reports
+
+.uv/
+uv.lock
+
+# IDEs
+.vscode/
+.idea/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Cache
+.cache/

@@ -1,0 +1,32 @@
+stock_analysis_task:
+  description: >
+    Analyze the stock {{stock_symbol}} using live market data.
+    Evaluate current price, daily movement, and momentum.
+    Provide a structured analysis report including:
+    - Price behavior
+    - Market sentiment (bullish / bearish / neutral)
+    - Short-term outlook
+
+    IMPORTANT:
+    Do NOT provide a BUY, HOLD, or SELL recommendation.
+    Perform ONLY ONE search query.
+    Summarize price movement, sentiment, and momentum.
+    Do NOT include raw search results, URLs, or large text blocks.
+  expected_output: >
+    A detailed stock analysis report summarizing price movement,
+    sentiment, and short-term outlook.
+  agent: stock_market_analyst
+
+trade_decision_task:
+  description: >
+    Using the analyst report below, decide whether the stock
+    {{stock_symbol}} should be BUY, HOLD, or SELL.
+
+    Consider:
+    - Momentum strength
+    - Risk vs reward
+    - Market stability
+  expected_output: >
+    A final trading decision (BUY / HOLD / SELL) with a concise,
+    well-reasoned justification.
+  agent: stock_trader
